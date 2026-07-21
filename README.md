@@ -10,6 +10,27 @@ Absolutely not for cheating :) Despite the name, this is meant for learning and 
 
 If you use this to cheat and get banned on Chess.com, Lichess, your school club ladder, or anywhere else, that is on you. I am not responsible for your account, rating, reputation, lost trophies, or awkward conversations with fair-play support.
 
+## Download For Windows
+
+**Most people should use this download instead of building from source:**
+
+[Download Chess Cheater v0.1.0 for Windows x64](https://github.com/Mastaba/Chess-Cheater/releases/download/v0.1.0/Chess-Cheater-v0.1.0-windows-x64.zip)
+
+How to run it:
+
+1. Download the ZIP file.
+2. Unzip it somewhere normal, like your Desktop or Downloads folder.
+3. Open the unzipped `Chess Cheater` folder.
+4. Run `Chess Cheater.exe`.
+
+The Windows ZIP includes the app, images, bundled openings, and Stockfish materials required for local analysis.
+
+Checksum file:
+
+[Chess-Cheater-v0.1.0-windows-x64.zip.sha256](https://github.com/Mastaba/Chess-Cheater/releases/download/v0.1.0/Chess-Cheater-v0.1.0-windows-x64.zip.sha256)
+
+All release downloads are on the [GitHub Releases page](https://github.com/Mastaba/Chess-Cheater/releases).
+
 ![Chess Cheater demo](screenshot.gif)
 
 ## What It Does
@@ -54,7 +75,7 @@ python main.py
 
 ## Learn Opening Mode
 
-Open `View > Learn opening mode`, then select a piece. The Stockfish column is replaced by an opening guide for that selected piece.
+Open `Learn > Opening Mode`, then select a piece. The Stockfish column is replaced by an opening guide for that selected piece.
 
 The guide compares the current game line against the PGNs in `openings/` and `openings/variations/`. If moving the selected piece can still lead to known openings, Chess Cheater draws green arrows to those squares, labels each destination with a numbered circle, and lists the matching openings in the right column.
 
