@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Chess Cheater
+Comment=Local chess opening study and Stockfish analysis tool
+Exec=chess-cheater
+Icon=/opt/chess-cheater/assets/chess_cheater_rook.ico
+Terminal=false
+Categories=Game;BoardGame;Education;

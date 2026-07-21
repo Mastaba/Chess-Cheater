@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.idea/
+
+build/
+dist/
+release/
+*.spec
+
+*.pyc
+*.pyo
+
+# Keep oversized Stockfish binaries out of git history. They can be bundled in
+# GitHub Release downloads instead.
+engines/stockfish/*.zip
+engines/stockfish/stockfish/*.exe
+

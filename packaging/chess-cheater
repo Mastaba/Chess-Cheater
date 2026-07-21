@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+set -eu
+
+cd /opt/chess-cheater
+exec python3 /opt/chess-cheater/main.py "$@"

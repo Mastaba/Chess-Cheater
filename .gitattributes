@@ -1,0 +1,17 @@
+* text=auto
+
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.pgn text eol=lf
+*.sh text eol=lf
+packaging/chess-cheater text eol=lf
+packaging/chess-cheater.desktop text eol=lf
+
+*.png binary
+*.gif binary
+*.ico binary
+*.ai binary
+*.zip binary
+*.exe binary
+
