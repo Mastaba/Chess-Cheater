@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="box%20art.png" alt="Chess Cheater box art" width="640">
+</p>
+
 # Chess Cheater
 
 Chess Cheater is a local chess study app for reviewing games, exploring openings, and learning from Stockfish analysis.
