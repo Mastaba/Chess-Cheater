@@ -2,7 +2,7 @@
 
 Chess Cheater is a local chess study app for reviewing games, exploring openings, and learning from Stockfish analysis.
 
-Despite the name, this is not meant to be used for cheating. Use it to analyze completed games, study opening ideas, practice board vision, and understand engine recommendations. Do not use it during live online games, rated games, tournaments, or anywhere engine assistance is against the rules.
+Absolutely not for cheating :) Despite the name, this is meant for learning and analysis. Use it to analyze completed games, study opening ideas, practice board vision, and understand engine recommendations. Do not use it during live online games, rated games, tournaments, or anywhere engine assistance is against the rules.
 
 If you use this to cheat and get banned on Chess.com, Lichess, your school club ladder, or anywhere else, that is on you. I am not responsible for your account, rating, reputation, lost trophies, or awkward conversations with fair-play support.
 
