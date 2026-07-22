@@ -14,7 +14,7 @@ from stockfish_engine import StockfishEngine, StockfishError
 pygame.init()
 
 APP_NAME = "Chess Cheater"
-APP_VERSION = "0.1.0"
+APP_VERSION = "0.1.1"
 APP_TITLE = f"{APP_NAME} v{APP_VERSION}"
 PROJECT_ROOT = Path(__file__).resolve().parent
 APP_ICON_PATH = PROJECT_ROOT / "assets" / "chess_cheater_rook.ico"
