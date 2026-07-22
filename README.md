@@ -14,7 +14,7 @@ If you use this to cheat and get banned on Chess.com, Lichess, your school club 
 
 **Most people should use this download instead of building from source:**
 
-[Download Chess Cheater v0.1.0 for Windows x64](https://github.com/Mastaba/Chess-Cheater/releases/download/v0.1.0/Chess-Cheater-v0.1.0-windows-x64.zip)
+[Download Chess Cheater v0.1.1 for Windows x64](https://github.com/Mastaba/Chess-Cheater/releases/download/v0.1.1/Chess-Cheater-v0.1.1-windows-x64.zip)
 
 How to run it:
 
@@ -27,7 +27,7 @@ The Windows ZIP includes the app, images, bundled openings, and Stockfish materi
 
 Checksum file:
 
-[Chess-Cheater-v0.1.0-windows-x64.zip.sha256](https://github.com/Mastaba/Chess-Cheater/releases/download/v0.1.0/Chess-Cheater-v0.1.0-windows-x64.zip.sha256)
+[Chess-Cheater-v0.1.1-windows-x64.zip.sha256](https://github.com/Mastaba/Chess-Cheater/releases/download/v0.1.1/Chess-Cheater-v0.1.1-windows-x64.zip.sha256)
 
 All release downloads are on the [GitHub Releases page](https://github.com/Mastaba/Chess-Cheater/releases).
 
