@@ -46,7 +46,7 @@ All release downloads are on the [GitHub Releases page](https://github.com/Masta
 - Uses Stockfish to show the top engine moves.
 - Lets you preview Stockfish moves with animated board loops.
 - Can execute a selected Stockfish move on the board.
-- Includes Learn Opening mode, which matches the current line against 260 bundled opening PGNs and shows which selected-piece moves keep you in the opening book.
+- Includes Learn Opening mode, which matches the current line against 265 bundled opening PGNs and shows which selected-piece moves keep you in the opening book.
 
 ## Running From Source
 

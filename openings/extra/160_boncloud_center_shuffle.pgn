@@ -5,6 +5,6 @@
 [White "White"]
 [Black "Black"]
 [Result "*"]
-[Opening "Boncloud"]
+[Opening "Boncloud: Center Shuffle"]
 
-1. e4 e5 2. Ke2 Nc6 3. Nf3 Nf6 4. d3 d5 5. exd5 Nxd5 6. Ke1 *
+1. e4 e5 2. Ke2 d6 3. d4 exd4 4. Qxd4 Nc6 5. Qe3 Nf6 *
