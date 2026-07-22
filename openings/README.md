@@ -10,4 +10,4 @@ More branch-specific lines are in `openings/variations/`, for example:
 
 `openings/variations/01_ruy_lopez_berlin.pgn`
 
-The larger extra study pack is in `openings/extra/`. It adds 160 more importable lines, including novelty lines such as Boncloud, Cow, Brandon Jacobson Gambit, The Drunk Magnus Switcharoo, and Knights In A Meadow. The Cow and Boncloud entries include full setup lines plus several branches.
+The larger extra study pack is in `openings/extra/`. It adds 175 more importable lines, including novelty lines such as Boncloud, Cow, Brandon Jacobson Gambit, The Drunk Magnus Switcharoo, and Knights In A Meadow. Those novelty entries include full setup lines plus several branches.

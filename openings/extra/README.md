@@ -1,6 +1,6 @@
 # Extra Opening Pack
 
-This folder adds 160 additional Chess Cheater opening-study lines.
+This folder adds 175 additional Chess Cheater opening-study lines.
 
 Most files are legal continuation branches generated from the bundled common opening library so Learn Opening mode has more book depth to explore. The first few entries include requested novelty/meme lines:
 
@@ -10,6 +10,6 @@ Most files are legal continuation branches generated from the bundled common ope
 - The Drunk Magnus Switcharoo
 - Knights In A Meadow
 
-The Cow entry uses the full setup pattern, and files 151-155 add extra Cow branches. The Boncloud entry uses the early king move, and files 156-160 add extra Boncloud branches.
+The Cow entry uses the full setup pattern, and files 151-155 add extra Cow branches. The Boncloud entry uses the early king move, and files 156-160 add extra Boncloud branches. Files 161-175 add branches for the Brandon Jacobson Gambit, The Drunk Magnus Switcharoo, and Knights In A Meadow.
 
 These lines are for study and exploration, not complete games.
