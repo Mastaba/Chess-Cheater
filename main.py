@@ -78,6 +78,7 @@ STOCKFISH_HINT_FILL = (42, 101, 176, 180)
 OPENING_HINT = (40, 178, 88)
 OPENING_HINT_BG = (222, 248, 230)
 OPENING_HINT_FILL = (40, 178, 88, 145)
+OPENING_PIECE_HINT_FILL = (40, 178, 88, 82)
 ANALYSIS_SELECTED = (224, 164, 0)
 HOVER_GLOW = (88, 164, 242)
 HOVER_GLOW_SOFT = (211, 234, 255)
@@ -1331,11 +1332,11 @@ class ChessGame:
         del self.move_log[self.current_move_index:]
         del self.state_history[self.current_move_index + 1:]
 
-    def draw_game_state(self, surface, stockfish_moves=None, opening_choices=None):
+    def draw_game_state(self, surface, stockfish_moves=None, opening_choices=None, opening_turn_choices=None):
         self.draw_turn_banner(surface)
         self.draw_labels(surface)
         self.draw_board(surface)
-        self.draw_highlights(surface, stockfish_moves or [], opening_choices)
+        self.draw_highlights(surface, stockfish_moves or [], opening_choices, opening_turn_choices)
         self.draw_preview(surface)
         self.draw_square_name_overlay(surface)
         self.draw_dragged_piece(surface)
@@ -1463,13 +1464,15 @@ class ChessGame:
                 if piece != '--' and not is_preview_origin and not is_preview_target and not is_dragged_origin:
                     surface.blit(self.pieces[piece], rect)
 
-    def draw_highlights(self, surface, stockfish_moves, opening_choices=None):
+    def draw_highlights(self, surface, stockfish_moves, opening_choices=None, opening_turn_choices=None):
         stockfish_hint_targets = {}
         opening_hint_targets = {}
         opening_mode_selected = opening_choices is not None
         opening_choices = opening_choices or []
+        opening_turn_choices = opening_turn_choices or []
 
         self.draw_previous_move_highlight(surface)
+        self.draw_opening_piece_highlights(surface, opening_turn_choices)
 
         if self.selected_piece:
             row, col = self.selected_piece
@@ -1541,6 +1544,33 @@ class ChessGame:
             overlay = pygame.Surface((SQUARE_SIZE, SQUARE_SIZE), pygame.SRCALPHA)
             overlay.fill(color)
             surface.blit(overlay, self.square_rect(*square))
+
+    def draw_opening_piece_highlights(self, surface, opening_turn_choices):
+        if not opening_turn_choices:
+            return
+
+        current_color = 'w' if self.white_to_move else 'b'
+        highlighted = set()
+        for choice in opening_turn_choices:
+            try:
+                from_pos = self.square_to_pos(choice['from'])
+            except (KeyError, IndexError, ValueError):
+                continue
+
+            if from_pos in highlighted:
+                continue
+
+            row, col = from_pos
+            piece = self.board[row][col]
+            if piece == '--' or piece[0] != current_color:
+                continue
+
+            rect = self.square_rect(row, col)
+            overlay = pygame.Surface((SQUARE_SIZE, SQUARE_SIZE), pygame.SRCALPHA)
+            overlay.fill(OPENING_PIECE_HINT_FILL)
+            surface.blit(overlay, rect)
+            pygame.draw.rect(surface, OPENING_HINT, rect.inflate(-5, -5), 3)
+            highlighted.add(from_pos)
 
     def draw_chevron_vectors(self, surface, vectors, color):
         for from_pos, to_pos in vectors:
@@ -3529,6 +3559,7 @@ def main():
         stockfish_moves = analysis_window.get_moves()
         selected_square = game.selected_square_name()
         selected_analysis_move = game.preview_move['uci'] if game.preview_move else None
+        opening_turn_choices = opening_library.choices_for_game(game) if learn_opening_mode else None
         show_opening_panel = learn_opening_mode and bool(selected_square)
         opening_choices = (
             opening_library.choices_for_game(game, selected_square)
@@ -3537,7 +3568,7 @@ def main():
         )
         matching_opening_lines = len(opening_library.matching_lines(game)) if show_opening_panel else 0
         notation_window.draw(screen, game.move_log, game.current_move_index)
-        game.draw_game_state(screen, stockfish_moves, opening_choices)
+        game.draw_game_state(screen, stockfish_moves, opening_choices, opening_turn_choices)
         if show_opening_panel:
             opening_panel.draw(
                 screen,
