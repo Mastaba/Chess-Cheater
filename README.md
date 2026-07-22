@@ -46,7 +46,7 @@ All release downloads are on the [GitHub Releases page](https://github.com/Masta
 - Uses Stockfish to show the top engine moves.
 - Lets you preview Stockfish moves with animated board loops.
 - Can execute a selected Stockfish move on the board.
-- Includes Learn Opening mode, which matches the current line against bundled opening PGNs and shows which selected-piece moves keep you in the opening book.
+- Includes Learn Opening mode, which matches the current line against 255 bundled opening PGNs and shows which selected-piece moves keep you in the opening book.
 
 ## Running From Source
 
@@ -77,7 +77,7 @@ python main.py
 
 Open `Learn > Opening Mode`, then select a piece. The Stockfish column is replaced by an opening guide for that selected piece.
 
-The guide compares the current game line against the PGNs in `openings/` and `openings/variations/`. If moving the selected piece can still lead to known openings, Chess Cheater draws green arrows to those squares, labels each destination with a numbered circle, and lists the matching openings in the right column.
+The guide compares the current game line against the PGNs in `openings/`, `openings/variations/`, and `openings/extra/`. If moving the selected piece can still lead to known openings, Chess Cheater draws green arrows to those squares, labels each destination with a numbered circle, and lists the matching openings in the right column.
 
 ## Building A Windows EXE
 
@@ -158,7 +158,7 @@ main.py                 App UI, chess board, notation, Stockfish panel, opening 
 stockfish_engine.py     UCI wrapper used to talk to Stockfish
 images/                 Chess piece images
 assets/                 App icon
-openings/               Bundled opening PGNs
+openings/               Bundled opening PGNs, variations, and extra study lines
 engines/stockfish/      Bundled Stockfish release and GPL materials
 packaging/              Linux launcher, desktop file, and .deb builder
 screenshot.gif          Animated README demo
